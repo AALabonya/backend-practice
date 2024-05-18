@@ -6,6 +6,10 @@ const port = 3000
 //parser
 app.use(express.json())
 
+//i create router 
+const userRouter = express.Router()
+
+
 //now i create logger means middleware
 const logger = (req:Request, res:Response, next:NextFunction)=>{
   console.log(req.url, req.method, req.hostname);
