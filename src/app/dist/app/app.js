@@ -29,5 +29,11 @@ app.post("/hello", (req, res) => {
 });
 //global error handler 
 app.use((error, req, res, next) => {
+    if (error) {
+        res.status(400).json({
+            success: false,
+            message: "Something went wrong!",
+        });
+    }
 });
 exports.default = app;

@@ -32,7 +32,12 @@ app.post("/hello", (req: Request, res: Response)=>{
 
 //global error handler 
 app.use((error:any, req:Request, res:Response, next:NextFunction)=>{
-  
+  if(error){
+    res.status(400).json({
+      success:false,
+      message:"Something went wrong!",
+    })
+  }
 })
 
 export default app;
