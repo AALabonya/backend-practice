@@ -30,5 +30,9 @@ app.post("/hello", (req: Request, res: Response)=>{
     res.send("got data")
 })
 
+//global error handler 
+app.use((error:any, req:Request, res:Response, next:NextFunction)=>{
+  
+})
 
 export default app;

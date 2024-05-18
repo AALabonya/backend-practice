@@ -27,4 +27,7 @@ app.post("/hello", (req, res) => {
     console.log(req.body);
     res.send("got data");
 });
+//global error handler 
+app.use((error, req, res, next) => {
+});
 exports.default = app;
